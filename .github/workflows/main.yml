@@ -24,4 +24,5 @@ jobs:
         with:
           branch: gh-pages
           folder: cypress/reports
-          ssh-key: ${{ secrets.DEPLOY_KEY }}
+          permissions:
+            contents: write
