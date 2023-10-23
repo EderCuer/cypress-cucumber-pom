@@ -5,16 +5,16 @@ jobs:
  Cypress-Test:
    runs-on: ubuntu-latest
    steps:
-     - name: Checkout GitCode
-       uses: actions/checkout@v2
+      - name: Checkout GitCode
+        uses: actions/checkout@v2
     
-     - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
       - name: Install dependencies
         run: |
           npm install
 
-     - name: Run Cypress Test
-       uses: cypress-io/github-action@v4
-       with:
-         command: npm run cypress:headless
-         browser: chrome
+      - name: Run Cypress Test
+        uses: cypress-io/github-action@v4
+        with:
+          command: npm run cypress:headless
+          browser: chrome
