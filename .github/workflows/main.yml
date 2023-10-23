@@ -24,4 +24,4 @@ jobs:
         with:
           branch: gh-pages
           folder: cypress/reports
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
