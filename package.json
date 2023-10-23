@@ -1,0 +1,40 @@
+{
+  "name": "cypress-cucumber-pom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true,
+      "output": "cypress/cucumber-json/cucumber-json.json"
+    },
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json/",
+      "filePrefix": "",
+      "fileSufix": ".cucumber"
+    },
+    "stepDefinitions": [
+      "cypress/e2e/[filepath]/**/*.{js,ts}",
+      "cypress/e2e/[filepath].{js,ts}",
+      "cypress/e2e/step_definitions/**/*.{js,ts}"
+    ]
+  },
+  "scripts": {
+    "cypress:open": "npx cypress open",
+    "cypress:headless": "npx cypress run",
+    "postcypress:headless": "node cypress/support/multiple-cucumber-html-reporter.js"
+  },
+  "author": "Eder Cuer",
+  "license": "ISC",
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^18.0.6",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "multiple-cucumber-html-reporter": "^3.5.0"
+  },
+  "devDependencies": {
+    "cucumber-html-reporter": "^7.1.1",
+    "cypress": "^13.3.2"
+  }
+}
