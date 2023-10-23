@@ -7,7 +7,7 @@ var dateTime = date + "_" + time
 
 report.generate({
 	jsonDir: "cypress/cucumber-json/",
-	reportPath: "Report",
+	reportPath: "cypress/reports/Report",
 
 	metadata: {
 		browser: {
