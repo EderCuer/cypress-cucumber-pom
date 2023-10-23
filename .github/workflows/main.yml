@@ -23,6 +23,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           branch: gh-pages
-          folder: cypress/reports
+          folder: cypress/reports/Report
 permissions: 
   contents: write
