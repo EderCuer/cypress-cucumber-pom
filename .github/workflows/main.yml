@@ -24,3 +24,5 @@ jobs:
         with:
           branch: gh-pages
           folder: cypress/reports
+permissions: 
+  contents: write
